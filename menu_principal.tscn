@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btd4reobfl2ia"]
+
+[ext_resource type="Script" uid="uid://cd3y3rkotqpr8" path="res://menu_principal.gd" id="1_bj1uy"]
+
+[node name="Menu Principal" type="Control" unique_id=2138714328]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bj1uy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=718559909]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 107.0
+offset_right = 418.0
+offset_bottom = 173.0
+
+[node name="BotonNuevaPartida" type="Button" parent="VBoxContainer" unique_id=336074137]
+layout_mode = 2
+text = "Nueva Partida"
+
+[node name="BotonSalir" type="Button" parent="VBoxContainer" unique_id=1911217472]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/BotonNuevaPartida" to="." method="_on_boton_nueva_partida_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSalir" to="." method="_on_boton_salir_pressed"]

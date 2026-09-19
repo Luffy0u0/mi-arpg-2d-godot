@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cvp1wdvmgre4t"]
+
+[ext_resource type="Script" uid="uid://dbec3115espq5" path="res://seleccion_personaje.gd" id="1_3rgde"]
+
+[node name="SeleccionPersonaje" type="Control" unique_id=41432988]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3rgde")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=602239571]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 117.0
+offset_right = 375.0
+offset_bottom = 157.0
+
+[node name="BotonHeroe1" type="Button" parent="HBoxContainer" unique_id=2050623062]
+layout_mode = 2
+text = "Héroe 1"
+
+[node name="BotonHeroe2" type="Button" parent="HBoxContainer" unique_id=1318641694]
+layout_mode = 2
+text = "Héroe 2"
+
+[node name="BotonHeroe3" type="Button" parent="HBoxContainer" unique_id=1038721040]
+layout_mode = 2
+text = "Héroe 3"
+
+[node name="BotonHeroe4" type="Button" parent="HBoxContainer" unique_id=1397360609]
+layout_mode = 2
+text = "Héroe 4"
+
+[connection signal="pressed" from="HBoxContainer/BotonHeroe1" to="." method="_on_boton_heroe_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotonHeroe2" to="." method="_on_boton_heroe_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotonHeroe3" to="." method="_on_boton_heroe_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/BotonHeroe4" to="." method="_on_boton_heroe_4_pressed"]
